@@ -1,0 +1,19 @@
+<% include ./partials/header %> <% include ./partials/nav %>
+<div class="container">
+  <div class="comments">
+    <h1>AddComments</h1>
+    <div class="pad">
+      <form action="/addcomments/<%= blog._id %>" method="POST">
+        <label for="Comment">comment</label>
+        <input
+          type="text"
+          name="comment[comment]"
+          placeholder="add comment"
+          required
+        />
+        <input id="Comment" type="submit" value="Submit" />
+      </form>
+    </div>
+  </div>
+</div>
+<% include ./partials/footer%>

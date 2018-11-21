@@ -1,0 +1,25 @@
+<% include ./partials/header %> <% include ./partials/nav %>
+<section>
+  <div class="container">
+    <div class="login-form">
+      <h1>SignUp</h1>
+      <form method="POST" action="/register">
+        <input
+          type="text"
+          placeholder="&#xf007; username"
+          name="username"
+          required
+        />
+        <input
+          type="password"
+          placeholder="&#xf023; password"
+          name="password"
+          required
+        />
+        <input type="submit" name="submit" value="SignUp" />
+      </form>
+      <a href="/">Home</a>
+    </div>
+  </div>
+</section>
+<% include ./partials/footer %>

@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/navbar.css" />
+  </head>
+  <body>
+    <% include ./partials/nav %>
+    <div style="margin-top:30px">
+      <div class="container">
+        <div class="item">
+          <div class="image"><img src="<%= blog.image %>" /></div>
+          <div class="content">
+            <a class="header" href="/showblogs/<%= blog._id %>"
+              ><%=blog.title%></a
+            >
+            <div class="meta">
+              <span><%-blog.created.toDateString() %></span>
+            </div>
+            <div class="description"><p><%- blog.body %></p></div>
+          </div>
+        </div>
+        <a href="/addcomments/<%= blog._id %>" class="btn btn-primary"
+          >AddComments</a
+        >
+        <div style="margin-top:30px">
+          <% blog.comments.forEach(function(comment){%>
+          <div class="row">
+            <div class="col-lg-12">
+              <strong><%=comment.comment %></strong>
+              <p>Commented by <strong><%=comment.author.username%></strong></p>
+              <hr />
+            </div>
+          </div>
+          <%})%> <% include ./partials/footer %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

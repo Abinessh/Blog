@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/navbar.css" />
+  </head>
+  <body>
+    <% include ./partials/nav %>
+    <div class="container">
+      <div style="margin-top:20px" class="jumbotron">
+        <h4>Welcome to Blogs</h4>
+      </div>
+      <% blogs.forEach(function(blog){ %>
+      <div style="margin-top:20px">
+        <div class="item">
+          <div class="image"><img src="<%= blog.image %>" /></div>
+          <div class="content">
+            <a class="header" href="/blog/<%= blog._id %>"><%=blog.title%></a>
+            <div class="meta">
+              <span><%-blog.created.toDateString() %></span>
+            </div>
+            <div class="description">
+              <p><%- blog.body.substring(0,100) %>...</p>
+              <a class="btn btn-outline-secondary" href="/blog/<%= blog._id %>">
+                Read More <i class="fa fa-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+    <% include ./partials/footer %>
+  </body>
+</html>

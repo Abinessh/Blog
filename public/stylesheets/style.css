@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+body {
+  margin: 0%;
+  padding: 0%;
+  font-family: "Roboto Condensed", sans-serif;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 340px;
+  transform: translate(-50%, -50%);
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+}
+.login-form {
+  position: relative;
+  box-sizing: border-box;
+  padding: 60px 30px;
+}
+.login-form h1 {
+  font-size: 30px;
+  margin: 0 0 20px;
+  color: blue;
+  text-transform: uppercase;
+}
+.login-form a {
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  color: coral;
+  font-size: 18px;
+}
+.login-form i {
+  text-align: center;
+  display: block;
+}
+.login-form input {
+  width: 100%;
+  margin: 10px 10px;
+  padding: 10px 20px;
+  display: block;
+  box-sizing: border-box;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  outline: none;
+  border: none;
+  background: rgba(0, 0, 128, 0.2);
+  font-size: 16px;
+  font-family: "Roboto Condensed", sans-serif;
+  /* text-transform: uppercase; */
+  letter-spacing: 1px;
+  /* border-radius: 5px; */
+}
+/* for fontawesome icon placing inside input field */
+.login-form input[type="text"] {
+  font-family: FontAwesome;
+}
+.login-form input[type="password"] {
+  font-family: FontAwesome;
+}
+.login-form input[type="submit"] {
+  background: #0072ff;
+  font-size: 16px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+.login-form input[type="submit"]:hover {
+  background: #005aca;
+}
+
+/*Blogs*/
+
+.blog h1 {
+  font-size: 20px;
+  width: 50%;
+  border-bottom: 5px solid rgb(44, 126, 219);
+}
+.blog .form {
+  margin: 20px 10px;
+}
+.blog .form-group {
+  margin: 10px 10px;
+}
+.blog label {
+  display: block;
+  font-size: 20px;
+  font-weight: 150;
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: 1px;
+}
+.blog input {
+  padding: 10px 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.blog textarea {
+  padding: 10px 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.blog input[type="submit"] {
+  background: #0072ff;
+  font-size: 16px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+.blog input[type="submit"]:hover {
+  background: #005aca;
+}
+
+/*comments*/
+.comments h1 {
+  font-size: 20px;
+  width: 50%;
+  border-bottom: 5px solid rgb(44, 126, 219);
+}
+.comments .form {
+  margin: 20px 10px;
+  padding: 10px 10px;
+}
+.comments label {
+  display: block;
+  font-size: 20px;
+  font-weight: 150;
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: 1px;
+}
+.comments input {
+  padding: 10px 10px;
+  width: 100%;
+  margin: 5px auto;
+  box-sizing: border-box;
+}
+.comments input[type="submit"] {
+  background: #0072ff;
+  font-size: 16px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 5px;
+}
+.comments input[type="submit"]:hover {
+  background: #005aca;
+}
+.comments .pad {
+  margin: 20px 20px;
+}

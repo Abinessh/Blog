@@ -1,0 +1,15 @@
+<nav>
+  <div class="toggle"><i class="fa fa-bars menu" aria-hidden="true"></i></div>
+  <ul>
+    <!-- <li><a href="#">Blogs</a></li> -->
+    <li><a href="/">Home</a></li>
+    <li><a href="/addblog">AddBlog</a></li>
+    <% if(!CurrentUser ){%>
+    <li><a href="/login">SignIn</a></li>
+    <li><a href="/register">SignUp</a></li>
+    <% } else {%>
+    <li><a href="#">SignedIn As <%=CurrentUser.username%></a></li>
+    <li><a href="/logout">SignOut</a></li>
+    <%}%>
+  </ul>
+</nav>
